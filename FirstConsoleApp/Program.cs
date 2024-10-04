@@ -1,51 +1,79 @@
 ﻿
 
 
-using System.Runtime.CompilerServices;
-
-int i=100000;
-double price = i + (i*.24);
-Console.WriteLine(price);
-string s = "17833";
-double s1 = Convert.ToDouble(i);
-//string cannot be assigned to any numeric data types, then convert the string to double, or decimal or int or the
-//datatype which u want to put it
-Decimal d1 = Convert.ToDecimal(s);
-i = Convert.ToInt32(s);
-
-string s2 = price.ToString();
+//struct --int,float,double,decimal, datetime
+//class--Object
+using System.Drawing;
 
 
-string s3 = "11abc";
+Color favColor = Color.Magenta;
+Nullable<Color> nonFavColor = null;
+Color? backcolor = Color.Red;
+Color defaultValue=backcolor.GetValueOrDefault();
+Console.WriteLine("BAckground color=" + defaultValue);
 
-//float f1=float.Parse(s3);
-//float f1 = Convert.ToSingle(s3);
-float.TryParse(s3, out float f1);
+//Two types of data types:
+//    1) Value: struct,enums
+//    2) Reference: everything other than struct and enum
 
+//Value types are stored on the stack
+//Reference types are always store on the heap
 
-Console.WriteLine(f1);
+//Value types cannot be assigned a null value
+//Reference types can be assigned a null value
 
+Nullable<int> i = null;
+int? j = null;
 
-//int p1=Int32.Parse(s3);
-
-//float p2 = 11.4f;
-//int p3 = Int32.Parse(p2);//can only convert/parse a string to a int
-//int someValue=Convert.ToInt32(p2);//possible
+string name = null;
 
 
 
-//Console.WriteLine("Enter a radius");
-//double radius =Convert.ToDouble(Console.ReadLine());
 
-//Console.WriteLine("The data type of radius= "  + radius.GetType());
-//Console.WriteLine("The value in  radius =" + radius);
-//double area=3.14*radius*radius;
-//Console.WriteLine("Area of circle= " + area);
 
-Console.WriteLine("The default date format= " + DateTime.Now) ;
-Console.WriteLine("Enter a date");
-DateTime joiningDate=Convert.ToDateTime(Console.ReadLine());
-Console.WriteLine(joiningDate);
+//int i=100000;
+//double price = i + (i*.24);
+//Console.WriteLine(price);
+//string s = "17833";
+//double s1 = Convert.ToDouble(i);
+////string cannot be assigned to any numeric data types, then convert the string to double, or decimal or int or the
+////datatype which u want to put it
+//Decimal d1 = Convert.ToDecimal(s);
+//i = Convert.ToInt32(s);
+
+//string s2 = price.ToString();
+
+
+//string s3 = "11abc";
+
+////float f1=float.Parse(s3);
+////float f1 = Convert.ToSingle(s3);
+  
+//float.TryParse(s3, out float f1);
+
+//Console.WriteLine(f1);
+
+
+////int p1=Int32.Parse(s3);
+
+////float p2 = 11.4f;
+////int p3 = Int32.Parse(p2);//can only convert/parse a string to a int
+////int someValue=Convert.ToInt32(p2);//possible
+
+
+
+////Console.WriteLine("Enter a radius");
+////double radius =Convert.ToDouble(Console.ReadLine());
+
+////Console.WriteLine("The data type of radius= "  + radius.GetType());
+////Console.WriteLine("The value in  radius =" + radius);
+////double area=3.14*radius*radius;
+////Console.WriteLine("Area of circle= " + area);
+
+//Console.WriteLine("The default date format= " + DateTime.Now) ;
+//Console.WriteLine("Enter a date");
+//DateTime joiningDate=Convert.ToDateTime(Console.ReadLine());
+//Console.WriteLine(joiningDate);
 
 
 
