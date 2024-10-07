@@ -1,0 +1,151 @@
+strongly typed
+
+string vs                                           stringbuilder
+*immutable                                          mutable
+*creates new object	                    same string is manipulated so a single copy exists
+everytime its changed,
+and so many objects
+are created
+*+ operators leads to			the methods are already available with StringBuilder, so no other explicit methods are needed
+performance issues
+
+							Prefer SB over strings
+------------------------------------------------------------------------------------
+.net framework(windows)
+
+.net framework core(all os,platform independent)
+
+CLS,CTS,Language Layer,CLR (Common Language Compiler)
+					
+				       language specific compiler
+		SourceCode----------------------------------------------> IL/MSIL------>JIT---->Machine Level
+
+.cs        		.vb       		.fs 
+
+Language Rules will be checked by specific language compiler.
+csc.exe       vbc.exe       fsc.exe
+-------------------------------------------------------------------------------------
+
+Solution: App, DAO,Entity/Model, Exception,Utils
+
+
+Project:   Its part of solution,Every solution can have only one entry point(Main method).
+So in every solution, there can be only one of these.(Console App,Web Application, Windows App ,WebAPI)
+
+There are multiple project templates available, they are:
+Console App                                 Web Application                     Windows App                           WebAPI
+Menu                                                          Menu						Menu                             Frontend(HTML,JS Etc)
+
+
+
+Solution Name means Assignment Name/Heading (Main Folder Name)
+1 Solution---M Projects
+
+1) EntityLibrary--->
+Write Classes with and without business logic.
+Some classes with business logic and some without business logic.
+BusinessLogic means: 
+1) ProductName:  Business validation/rules/logic for productname.
+    a)should always be characters
+    b)It should be having a string length >=1 chars and <20 chars
+    c)It cannot be blank or empty.
+---------------------------------------
+Customer:
+CustID:
+    1) when searching, it must exists
+    2) when registering, it must be created/entered.
+
+Firstname:
+    a)should always be characters
+    b)It should be having a string length >=1 chars and <20 chars
+    c)It cannot be blank or empty.
+LastName:
+    a)should always be characters
+    b)It should be having a string length >=1 chars and <20 chars
+    c)It cannot be blank or empty.
+
+Phone: 
+1) it should be numbers only
+2) exact 10 digits
+
+Email: unique
+
+Address: blank allowed
+create table customers
+(custname varchar(20)
+
+
+
+2) DAOLibrary:All DB operation here by having interfaces/abstract classes along with its implementation.
+
+3) ExceptionLibrary: All Exception handling code will be here.
+
+
+4) UtilityLibrary: Only utility methods like db connection will be here.
+
+5)Main---Call the above created library codes, via class objects.
+
+-----------------------------------------------------------------------------------
+
+
+
+Control Structures: Controlling the logic or flow of the program.
+It means controlling/defining the behaviour of the variables/inputs taken from the user, and also working with built in constants, if any.
+if condition-----> checks whether the variable is as per the defined condition,
+and what to do if it is "true" and what to do if it is "false"
+
+if(condition)<-----evaluates to true
+{
+//when true what to do
+}
+else
+{
+//when false what to do
+}
+
+int age=10;
+
+if(age>=10)
+{
+	cw("Age is greater than or equal to 10");
+}
+else
+{
+	cw("Age is not  greater than or equal to 10");
+}
+
+
+if(!condition)<-----evaluates to true
+{
+//when false what to do
+}
+else
+{
+//when true what to do
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
