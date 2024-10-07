@@ -161,6 +161,7 @@ internal class Program
         //Console.WriteLine(details);
 
 
+
         //double unitPrice = 23432.33;
         //int p = 70;
         //string s = string.Format("The price={0:C}", unitPrice);
@@ -172,14 +173,62 @@ internal class Program
         //bool ans=string.IsNullOrEmpty(username);
         //Console.WriteLine(ans);
 
-       DateTime dt= DateTime.Now;
-        Console.WriteLine(dt);//current date and time
-        int daysInMonth=DateTime.DaysInMonth(dt.Year,dt.Month);
-        Console.WriteLine(daysInMonth);
-        DateTime after10days=dt.AddDays(10);
-        Console.WriteLine(after10days);
-       bool ans= DateTime.IsLeapYear(dt.Year);
-        Console.WriteLine(ans);
+        //DateTime dt= DateTime.Now;
+        // Console.WriteLine(dt);//current date and time
+        // int daysInMonth=DateTime.DaysInMonth(dt.Year,dt.Month);
+        // Console.WriteLine(daysInMonth);
+        // DateTime after10days=dt.AddDays(10);
+        // Console.WriteLine(after10days);
+        //bool ans= DateTime.IsLeapYear(dt.Year);
+        // Console.WriteLine(ans);
+
+        //Arrays
+        //Collection of similar elements
+        //Initilize, Iterate and Print, Operations on the array
+
+        int[] arr = new int[3] { 1, 2, 3 };
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine(arr[i]);
+        }
+
+        Console.WriteLine("=======================");
+
+        int[] arr1;
+        arr1 = new int[] { 1, 2, 3, 5, 4};
+        foreach (var item in arr1)
+        {
+            Console.WriteLine(item);
+        }
+
+        Console.WriteLine("**************************************");
+        Array userArray= Array.CreateInstance(typeof(int), 10);
+        userArray.SetValue(100, 0);
+        userArray.SetValue(200, 1);
+        userArray.SetValue(300, 4);
+        userArray.SetValue(700, 3);
+        userArray.SetValue(1000, 2);
+        userArray.SetValue(2000, 8);
+        userArray.SetValue(10, 9);
+        userArray.SetValue(1, 6);
+        userArray.SetValue(99, 5);
+        userArray.SetValue(100, 0);
+
+        foreach (var item in userArray)
+        {
+            Console.WriteLine(item);
+        }
+        Console.WriteLine();
+
+        for (int i = 0; i < userArray.Length; i++) 
+        {
+      Console.WriteLine(userArray.GetValue(i));
+        
+        }
+
+
+
 
 
 
