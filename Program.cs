@@ -186,55 +186,163 @@ internal class Program
         //Collection of similar elements
         //Initilize, Iterate and Print, Operations on the array
 
-        int[] arr = new int[3] { 1, 2, 3 };
+        //  int[] arr = new int[3] { 1, 2, 3 };
 
-        for (int i = 0; i < arr.Length; i++)
+        //  for (int i = 0; i < arr.Length; i++)
+        //  {
+        //      Console.WriteLine(arr[i]);
+        //  }
+
+        //  Console.WriteLine("=======================");
+
+        //  int[] arr1;
+        //  arr1 = new int[] { 1, 2, 3, 5, 4};
+        //  foreach (var item in arr1)
+        //  {
+        //      Console.WriteLine(item);
+        //  }
+
+        //  Console.WriteLine("**************************************");
+        //  Array userArray= Array.CreateInstance(typeof(int), 10);
+        //  userArray.SetValue(100, 0);
+        //  userArray.SetValue(200, 1);
+        //  userArray.SetValue(300, 4);
+        //  userArray.SetValue(700, 3);
+        //  userArray.SetValue(1000, 2);
+        //  userArray.SetValue(2000, 8);
+        //  userArray.SetValue(10, 9);
+        //  userArray.SetValue(1, 6);
+        //  userArray.SetValue(99, 5);
+        //  userArray.SetValue(100, 0);
+
+        //  foreach (var item in userArray)
+        //  {
+        //      Console.WriteLine(item);
+        //  }
+        //  Console.WriteLine();
+
+        //  for (int i = 0; i < userArray.Length; i++) 
+        //  {
+        //Console.WriteLine(userArray.GetValue(i));
+
+        //  }
+
+        //string[] s = { "Hello", "world" };
+
+        //foreach (string s2 in s)
+        //{
+        //    Console.Write(s2);
+        //    Console.Write(",");
+
+        //}
+
+        //Console.WriteLine("Total length=" + s.Length);
+
+        //char[] charArray=new char[17];
+        //int index = 0;
+        //foreach (string item in s)
+        //{
+        //    foreach (char item1 in item)
+        //    {
+        //        charArray[index++] = item1;
+        //    }
+        //}
+
+        //foreach (var item in charArray)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+        //Console.WriteLine("=============");
+        ////Second
+        //string originalString = "Welcome";
+        //char[] cArr=string.Join("",originalString).ToCharArray();
+
+        //foreach (var item in cArr)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+        //Console.WriteLine("---------------------------");
+        //string s1 = "Greetings";
+
+        //char[] cdata = new char[9];
+
+        //char[] CArr=s1.ToCharArray();
+        //foreach (var item in CArr)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+
+        //string joinedStr=string.Join(" ", charArray);
+        //Console.WriteLine(joinedStr);
+
+
+        //Multi-dimensional array---first rows=3,columns=4
+        int[,] TwoDimen = new int[3, 4] 
         {
-            Console.WriteLine(arr[i]);
+        {10,20,30,40 },
+        {1000,2000,3000,4000 },
+        {1,2,3,4 }
+
+        
+        };
+
+        foreach (int item in TwoDimen) 
+        {
+            Console.Write(item + "\t");
         }
 
-        Console.WriteLine("=======================");
 
-        int[] arr1;
-        arr1 = new int[] { 1, 2, 3, 5, 4};
-        foreach (var item in arr1)
+        for (int i = 0; i < TwoDimen.GetLength(0); i++) //number of rows
         {
-            Console.WriteLine(item);
-        }
-
-        Console.WriteLine("**************************************");
-        Array userArray= Array.CreateInstance(typeof(int), 10);
-        userArray.SetValue(100, 0);
-        userArray.SetValue(200, 1);
-        userArray.SetValue(300, 4);
-        userArray.SetValue(700, 3);
-        userArray.SetValue(1000, 2);
-        userArray.SetValue(2000, 8);
-        userArray.SetValue(10, 9);
-        userArray.SetValue(1, 6);
-        userArray.SetValue(99, 5);
-        userArray.SetValue(100, 0);
-
-        foreach (var item in userArray)
-        {
-            Console.WriteLine(item);
-        }
-        Console.WriteLine();
-
-        for (int i = 0; i < userArray.Length; i++) 
-        {
-      Console.WriteLine(userArray.GetValue(i));
+            for (int j = 0; j < TwoDimen.GetLength(1); j++) //number of columns
+            {
+                Console.WriteLine(TwoDimen[i,j]);
+            }
         
         }
 
 
+        Console.WriteLine("=================================");
+
+        //cube--depth,rows,columns
+        int[,,] cube = new int[2, 3, 4] 
+                {
+{
+  {10,20,30,40 },
+        {1000,2000,3000,4000 },
+        {100,200,300,400 }
+
+},
+
+{
+        {5,6,7,8 },
+        {9,10,11,12 },
+        {13,14,15,16}
+
+}
+
+            };
 
 
+        for (int i = 0; i < cube.GetLength(0); i++)
+        {
+
+            for (int j = 0; j < cube.GetLength(1); j++)
+            {
+                for (int k = 0; k < cube.GetLength(2); k++) 
+                {
+                    Console.Write(cube[i,j,k] + " ");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
 
 
-
-
-
+      
 
 
 
